@@ -6,7 +6,6 @@ project(qp_ik_solver)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
   roscpp
-  mathlib
   svm_grad
   sg_differentiation
 )
