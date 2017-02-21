@@ -1,0 +1,287 @@
+/* Produced by CVXGEN, 2016-12-20 14:28:07 -0500.  */
+/* CVXGEN is Copyright (C) 2006-2012 Jacob Mattingley, jem@cvxgen.com. */
+/* The code in this file is Copyright (C) 2006-2012 Jacob Mattingley. */
+/* CVXGEN, or solvers produced by CVXGEN, cannot be used for commercial */
+/* applications without prior written permission from Jacob Mattingley. */
+
+/* Filename: matrix_support.c. */
+/* Description: Support functions for matrix multiplication and vector filling. */
+#include "solver.h"
+void multbymA(double *lhs, double *rhs) {
+}
+void multbymAT(double *lhs, double *rhs) {
+  lhs[0] = 0;
+  lhs[1] = 0;
+  lhs[2] = 0;
+  lhs[3] = 0;
+  lhs[4] = 0;
+  lhs[5] = 0;
+  lhs[6] = 0;
+  lhs[7] = 0;
+  lhs[8] = 0;
+  lhs[9] = 0;
+  lhs[10] = 0;
+  lhs[11] = 0;
+  lhs[12] = 0;
+  lhs[13] = 0;
+  lhs[14] = 0;
+  lhs[15] = 0;
+  lhs[16] = 0;
+  lhs[17] = 0;
+  lhs[18] = 0;
+  lhs[19] = 0;
+  lhs[20] = 0;
+  lhs[21] = 0;
+  lhs[22] = 0;
+  lhs[23] = 0;
+  lhs[24] = 0;
+  lhs[25] = 0;
+  lhs[26] = 0;
+  lhs[27] = 0;
+  lhs[28] = 0;
+  lhs[29] = 0;
+  lhs[30] = 0;
+  lhs[31] = 0;
+}
+void multbymG(double *lhs, double *rhs) {
+  lhs[0] = -rhs[0]*(params.J[0])-rhs[1]*(params.J[18])-rhs[2]*(params.J[36])-rhs[3]*(params.J[54])-rhs[4]*(params.J[72])-rhs[5]*(params.J[90])-rhs[6]*(params.J[108])-rhs[7]*(params.J[126])-rhs[8]*(params.J[144])-rhs[9]*(params.J[162])-rhs[10]*(params.J[180])-rhs[11]*(params.J[198])-rhs[12]*(params.J[216])-rhs[13]*(params.J[234])-rhs[14]*(-1);
+  lhs[1] = -rhs[0]*(params.J[1])-rhs[1]*(params.J[19])-rhs[2]*(params.J[37])-rhs[3]*(params.J[55])-rhs[4]*(params.J[73])-rhs[5]*(params.J[91])-rhs[6]*(params.J[109])-rhs[7]*(params.J[127])-rhs[8]*(params.J[145])-rhs[9]*(params.J[163])-rhs[10]*(params.J[181])-rhs[11]*(params.J[199])-rhs[12]*(params.J[217])-rhs[13]*(params.J[235])-rhs[15]*(-1);
+  lhs[2] = -rhs[0]*(params.J[2])-rhs[1]*(params.J[20])-rhs[2]*(params.J[38])-rhs[3]*(params.J[56])-rhs[4]*(params.J[74])-rhs[5]*(params.J[92])-rhs[6]*(params.J[110])-rhs[7]*(params.J[128])-rhs[8]*(params.J[146])-rhs[9]*(params.J[164])-rhs[10]*(params.J[182])-rhs[11]*(params.J[200])-rhs[12]*(params.J[218])-rhs[13]*(params.J[236])-rhs[16]*(-1);
+  lhs[3] = -rhs[0]*(params.J[3])-rhs[1]*(params.J[21])-rhs[2]*(params.J[39])-rhs[3]*(params.J[57])-rhs[4]*(params.J[75])-rhs[5]*(params.J[93])-rhs[6]*(params.J[111])-rhs[7]*(params.J[129])-rhs[8]*(params.J[147])-rhs[9]*(params.J[165])-rhs[10]*(params.J[183])-rhs[11]*(params.J[201])-rhs[12]*(params.J[219])-rhs[13]*(params.J[237])-rhs[17]*(-1);
+  lhs[4] = -rhs[0]*(params.J[4])-rhs[1]*(params.J[22])-rhs[2]*(params.J[40])-rhs[3]*(params.J[58])-rhs[4]*(params.J[76])-rhs[5]*(params.J[94])-rhs[6]*(params.J[112])-rhs[7]*(params.J[130])-rhs[8]*(params.J[148])-rhs[9]*(params.J[166])-rhs[10]*(params.J[184])-rhs[11]*(params.J[202])-rhs[12]*(params.J[220])-rhs[13]*(params.J[238])-rhs[18]*(-1);
+  lhs[5] = -rhs[0]*(params.J[5])-rhs[1]*(params.J[23])-rhs[2]*(params.J[41])-rhs[3]*(params.J[59])-rhs[4]*(params.J[77])-rhs[5]*(params.J[95])-rhs[6]*(params.J[113])-rhs[7]*(params.J[131])-rhs[8]*(params.J[149])-rhs[9]*(params.J[167])-rhs[10]*(params.J[185])-rhs[11]*(params.J[203])-rhs[12]*(params.J[221])-rhs[13]*(params.J[239])-rhs[19]*(-1);
+  lhs[6] = -rhs[0]*(params.J[6])-rhs[1]*(params.J[24])-rhs[2]*(params.J[42])-rhs[3]*(params.J[60])-rhs[4]*(params.J[78])-rhs[5]*(params.J[96])-rhs[6]*(params.J[114])-rhs[7]*(params.J[132])-rhs[8]*(params.J[150])-rhs[9]*(params.J[168])-rhs[10]*(params.J[186])-rhs[11]*(params.J[204])-rhs[12]*(params.J[222])-rhs[13]*(params.J[240])-rhs[20]*(-1);
+  lhs[7] = -rhs[0]*(params.J[7])-rhs[1]*(params.J[25])-rhs[2]*(params.J[43])-rhs[3]*(params.J[61])-rhs[4]*(params.J[79])-rhs[5]*(params.J[97])-rhs[6]*(params.J[115])-rhs[7]*(params.J[133])-rhs[8]*(params.J[151])-rhs[9]*(params.J[169])-rhs[10]*(params.J[187])-rhs[11]*(params.J[205])-rhs[12]*(params.J[223])-rhs[13]*(params.J[241])-rhs[21]*(-1);
+  lhs[8] = -rhs[0]*(params.J[8])-rhs[1]*(params.J[26])-rhs[2]*(params.J[44])-rhs[3]*(params.J[62])-rhs[4]*(params.J[80])-rhs[5]*(params.J[98])-rhs[6]*(params.J[116])-rhs[7]*(params.J[134])-rhs[8]*(params.J[152])-rhs[9]*(params.J[170])-rhs[10]*(params.J[188])-rhs[11]*(params.J[206])-rhs[12]*(params.J[224])-rhs[13]*(params.J[242])-rhs[22]*(-1);
+  lhs[9] = -rhs[0]*(params.J[9])-rhs[1]*(params.J[27])-rhs[2]*(params.J[45])-rhs[3]*(params.J[63])-rhs[4]*(params.J[81])-rhs[5]*(params.J[99])-rhs[6]*(params.J[117])-rhs[7]*(params.J[135])-rhs[8]*(params.J[153])-rhs[9]*(params.J[171])-rhs[10]*(params.J[189])-rhs[11]*(params.J[207])-rhs[12]*(params.J[225])-rhs[13]*(params.J[243])-rhs[23]*(-1);
+  lhs[10] = -rhs[0]*(params.J[10])-rhs[1]*(params.J[28])-rhs[2]*(params.J[46])-rhs[3]*(params.J[64])-rhs[4]*(params.J[82])-rhs[5]*(params.J[100])-rhs[6]*(params.J[118])-rhs[7]*(params.J[136])-rhs[8]*(params.J[154])-rhs[9]*(params.J[172])-rhs[10]*(params.J[190])-rhs[11]*(params.J[208])-rhs[12]*(params.J[226])-rhs[13]*(params.J[244])-rhs[24]*(-1);
+  lhs[11] = -rhs[0]*(params.J[11])-rhs[1]*(params.J[29])-rhs[2]*(params.J[47])-rhs[3]*(params.J[65])-rhs[4]*(params.J[83])-rhs[5]*(params.J[101])-rhs[6]*(params.J[119])-rhs[7]*(params.J[137])-rhs[8]*(params.J[155])-rhs[9]*(params.J[173])-rhs[10]*(params.J[191])-rhs[11]*(params.J[209])-rhs[12]*(params.J[227])-rhs[13]*(params.J[245])-rhs[25]*(-1);
+  lhs[12] = -rhs[0]*(params.J[12])-rhs[1]*(params.J[30])-rhs[2]*(params.J[48])-rhs[3]*(params.J[66])-rhs[4]*(params.J[84])-rhs[5]*(params.J[102])-rhs[6]*(params.J[120])-rhs[7]*(params.J[138])-rhs[8]*(params.J[156])-rhs[9]*(params.J[174])-rhs[10]*(params.J[192])-rhs[11]*(params.J[210])-rhs[12]*(params.J[228])-rhs[13]*(params.J[246])-rhs[26]*(-1);
+  lhs[13] = -rhs[0]*(params.J[13])-rhs[1]*(params.J[31])-rhs[2]*(params.J[49])-rhs[3]*(params.J[67])-rhs[4]*(params.J[85])-rhs[5]*(params.J[103])-rhs[6]*(params.J[121])-rhs[7]*(params.J[139])-rhs[8]*(params.J[157])-rhs[9]*(params.J[175])-rhs[10]*(params.J[193])-rhs[11]*(params.J[211])-rhs[12]*(params.J[229])-rhs[13]*(params.J[247])-rhs[27]*(-1);
+  lhs[14] = -rhs[0]*(params.J[14])-rhs[1]*(params.J[32])-rhs[2]*(params.J[50])-rhs[3]*(params.J[68])-rhs[4]*(params.J[86])-rhs[5]*(params.J[104])-rhs[6]*(params.J[122])-rhs[7]*(params.J[140])-rhs[8]*(params.J[158])-rhs[9]*(params.J[176])-rhs[10]*(params.J[194])-rhs[11]*(params.J[212])-rhs[12]*(params.J[230])-rhs[13]*(params.J[248])-rhs[28]*(-1);
+  lhs[15] = -rhs[0]*(params.J[15])-rhs[1]*(params.J[33])-rhs[2]*(params.J[51])-rhs[3]*(params.J[69])-rhs[4]*(params.J[87])-rhs[5]*(params.J[105])-rhs[6]*(params.J[123])-rhs[7]*(params.J[141])-rhs[8]*(params.J[159])-rhs[9]*(params.J[177])-rhs[10]*(params.J[195])-rhs[11]*(params.J[213])-rhs[12]*(params.J[231])-rhs[13]*(params.J[249])-rhs[29]*(-1);
+  lhs[16] = -rhs[0]*(params.J[16])-rhs[1]*(params.J[34])-rhs[2]*(params.J[52])-rhs[3]*(params.J[70])-rhs[4]*(params.J[88])-rhs[5]*(params.J[106])-rhs[6]*(params.J[124])-rhs[7]*(params.J[142])-rhs[8]*(params.J[160])-rhs[9]*(params.J[178])-rhs[10]*(params.J[196])-rhs[11]*(params.J[214])-rhs[12]*(params.J[232])-rhs[13]*(params.J[250])-rhs[30]*(-1);
+  lhs[17] = -rhs[0]*(params.J[17])-rhs[1]*(params.J[35])-rhs[2]*(params.J[53])-rhs[3]*(params.J[71])-rhs[4]*(params.J[89])-rhs[5]*(params.J[107])-rhs[6]*(params.J[125])-rhs[7]*(params.J[143])-rhs[8]*(params.J[161])-rhs[9]*(params.J[179])-rhs[10]*(params.J[197])-rhs[11]*(params.J[215])-rhs[12]*(params.J[233])-rhs[13]*(params.J[251])-rhs[31]*(-1);
+  lhs[18] = -rhs[0]*(-params.J[0])-rhs[1]*(-params.J[18])-rhs[2]*(-params.J[36])-rhs[3]*(-params.J[54])-rhs[4]*(-params.J[72])-rhs[5]*(-params.J[90])-rhs[6]*(-params.J[108])-rhs[7]*(-params.J[126])-rhs[8]*(-params.J[144])-rhs[9]*(-params.J[162])-rhs[10]*(-params.J[180])-rhs[11]*(-params.J[198])-rhs[12]*(-params.J[216])-rhs[13]*(-params.J[234])-rhs[14]*(-1);
+  lhs[19] = -rhs[0]*(-params.J[1])-rhs[1]*(-params.J[19])-rhs[2]*(-params.J[37])-rhs[3]*(-params.J[55])-rhs[4]*(-params.J[73])-rhs[5]*(-params.J[91])-rhs[6]*(-params.J[109])-rhs[7]*(-params.J[127])-rhs[8]*(-params.J[145])-rhs[9]*(-params.J[163])-rhs[10]*(-params.J[181])-rhs[11]*(-params.J[199])-rhs[12]*(-params.J[217])-rhs[13]*(-params.J[235])-rhs[15]*(-1);
+  lhs[20] = -rhs[0]*(-params.J[2])-rhs[1]*(-params.J[20])-rhs[2]*(-params.J[38])-rhs[3]*(-params.J[56])-rhs[4]*(-params.J[74])-rhs[5]*(-params.J[92])-rhs[6]*(-params.J[110])-rhs[7]*(-params.J[128])-rhs[8]*(-params.J[146])-rhs[9]*(-params.J[164])-rhs[10]*(-params.J[182])-rhs[11]*(-params.J[200])-rhs[12]*(-params.J[218])-rhs[13]*(-params.J[236])-rhs[16]*(-1);
+  lhs[21] = -rhs[0]*(-params.J[3])-rhs[1]*(-params.J[21])-rhs[2]*(-params.J[39])-rhs[3]*(-params.J[57])-rhs[4]*(-params.J[75])-rhs[5]*(-params.J[93])-rhs[6]*(-params.J[111])-rhs[7]*(-params.J[129])-rhs[8]*(-params.J[147])-rhs[9]*(-params.J[165])-rhs[10]*(-params.J[183])-rhs[11]*(-params.J[201])-rhs[12]*(-params.J[219])-rhs[13]*(-params.J[237])-rhs[17]*(-1);
+  lhs[22] = -rhs[0]*(-params.J[4])-rhs[1]*(-params.J[22])-rhs[2]*(-params.J[40])-rhs[3]*(-params.J[58])-rhs[4]*(-params.J[76])-rhs[5]*(-params.J[94])-rhs[6]*(-params.J[112])-rhs[7]*(-params.J[130])-rhs[8]*(-params.J[148])-rhs[9]*(-params.J[166])-rhs[10]*(-params.J[184])-rhs[11]*(-params.J[202])-rhs[12]*(-params.J[220])-rhs[13]*(-params.J[238])-rhs[18]*(-1);
+  lhs[23] = -rhs[0]*(-params.J[5])-rhs[1]*(-params.J[23])-rhs[2]*(-params.J[41])-rhs[3]*(-params.J[59])-rhs[4]*(-params.J[77])-rhs[5]*(-params.J[95])-rhs[6]*(-params.J[113])-rhs[7]*(-params.J[131])-rhs[8]*(-params.J[149])-rhs[9]*(-params.J[167])-rhs[10]*(-params.J[185])-rhs[11]*(-params.J[203])-rhs[12]*(-params.J[221])-rhs[13]*(-params.J[239])-rhs[19]*(-1);
+  lhs[24] = -rhs[0]*(-params.J[6])-rhs[1]*(-params.J[24])-rhs[2]*(-params.J[42])-rhs[3]*(-params.J[60])-rhs[4]*(-params.J[78])-rhs[5]*(-params.J[96])-rhs[6]*(-params.J[114])-rhs[7]*(-params.J[132])-rhs[8]*(-params.J[150])-rhs[9]*(-params.J[168])-rhs[10]*(-params.J[186])-rhs[11]*(-params.J[204])-rhs[12]*(-params.J[222])-rhs[13]*(-params.J[240])-rhs[20]*(-1);
+  lhs[25] = -rhs[0]*(-params.J[7])-rhs[1]*(-params.J[25])-rhs[2]*(-params.J[43])-rhs[3]*(-params.J[61])-rhs[4]*(-params.J[79])-rhs[5]*(-params.J[97])-rhs[6]*(-params.J[115])-rhs[7]*(-params.J[133])-rhs[8]*(-params.J[151])-rhs[9]*(-params.J[169])-rhs[10]*(-params.J[187])-rhs[11]*(-params.J[205])-rhs[12]*(-params.J[223])-rhs[13]*(-params.J[241])-rhs[21]*(-1);
+  lhs[26] = -rhs[0]*(-params.J[8])-rhs[1]*(-params.J[26])-rhs[2]*(-params.J[44])-rhs[3]*(-params.J[62])-rhs[4]*(-params.J[80])-rhs[5]*(-params.J[98])-rhs[6]*(-params.J[116])-rhs[7]*(-params.J[134])-rhs[8]*(-params.J[152])-rhs[9]*(-params.J[170])-rhs[10]*(-params.J[188])-rhs[11]*(-params.J[206])-rhs[12]*(-params.J[224])-rhs[13]*(-params.J[242])-rhs[22]*(-1);
+  lhs[27] = -rhs[0]*(-params.J[9])-rhs[1]*(-params.J[27])-rhs[2]*(-params.J[45])-rhs[3]*(-params.J[63])-rhs[4]*(-params.J[81])-rhs[5]*(-params.J[99])-rhs[6]*(-params.J[117])-rhs[7]*(-params.J[135])-rhs[8]*(-params.J[153])-rhs[9]*(-params.J[171])-rhs[10]*(-params.J[189])-rhs[11]*(-params.J[207])-rhs[12]*(-params.J[225])-rhs[13]*(-params.J[243])-rhs[23]*(-1);
+  lhs[28] = -rhs[0]*(-params.J[10])-rhs[1]*(-params.J[28])-rhs[2]*(-params.J[46])-rhs[3]*(-params.J[64])-rhs[4]*(-params.J[82])-rhs[5]*(-params.J[100])-rhs[6]*(-params.J[118])-rhs[7]*(-params.J[136])-rhs[8]*(-params.J[154])-rhs[9]*(-params.J[172])-rhs[10]*(-params.J[190])-rhs[11]*(-params.J[208])-rhs[12]*(-params.J[226])-rhs[13]*(-params.J[244])-rhs[24]*(-1);
+  lhs[29] = -rhs[0]*(-params.J[11])-rhs[1]*(-params.J[29])-rhs[2]*(-params.J[47])-rhs[3]*(-params.J[65])-rhs[4]*(-params.J[83])-rhs[5]*(-params.J[101])-rhs[6]*(-params.J[119])-rhs[7]*(-params.J[137])-rhs[8]*(-params.J[155])-rhs[9]*(-params.J[173])-rhs[10]*(-params.J[191])-rhs[11]*(-params.J[209])-rhs[12]*(-params.J[227])-rhs[13]*(-params.J[245])-rhs[25]*(-1);
+  lhs[30] = -rhs[0]*(-params.J[12])-rhs[1]*(-params.J[30])-rhs[2]*(-params.J[48])-rhs[3]*(-params.J[66])-rhs[4]*(-params.J[84])-rhs[5]*(-params.J[102])-rhs[6]*(-params.J[120])-rhs[7]*(-params.J[138])-rhs[8]*(-params.J[156])-rhs[9]*(-params.J[174])-rhs[10]*(-params.J[192])-rhs[11]*(-params.J[210])-rhs[12]*(-params.J[228])-rhs[13]*(-params.J[246])-rhs[26]*(-1);
+  lhs[31] = -rhs[0]*(-params.J[13])-rhs[1]*(-params.J[31])-rhs[2]*(-params.J[49])-rhs[3]*(-params.J[67])-rhs[4]*(-params.J[85])-rhs[5]*(-params.J[103])-rhs[6]*(-params.J[121])-rhs[7]*(-params.J[139])-rhs[8]*(-params.J[157])-rhs[9]*(-params.J[175])-rhs[10]*(-params.J[193])-rhs[11]*(-params.J[211])-rhs[12]*(-params.J[229])-rhs[13]*(-params.J[247])-rhs[27]*(-1);
+  lhs[32] = -rhs[0]*(-params.J[14])-rhs[1]*(-params.J[32])-rhs[2]*(-params.J[50])-rhs[3]*(-params.J[68])-rhs[4]*(-params.J[86])-rhs[5]*(-params.J[104])-rhs[6]*(-params.J[122])-rhs[7]*(-params.J[140])-rhs[8]*(-params.J[158])-rhs[9]*(-params.J[176])-rhs[10]*(-params.J[194])-rhs[11]*(-params.J[212])-rhs[12]*(-params.J[230])-rhs[13]*(-params.J[248])-rhs[28]*(-1);
+  lhs[33] = -rhs[0]*(-params.J[15])-rhs[1]*(-params.J[33])-rhs[2]*(-params.J[51])-rhs[3]*(-params.J[69])-rhs[4]*(-params.J[87])-rhs[5]*(-params.J[105])-rhs[6]*(-params.J[123])-rhs[7]*(-params.J[141])-rhs[8]*(-params.J[159])-rhs[9]*(-params.J[177])-rhs[10]*(-params.J[195])-rhs[11]*(-params.J[213])-rhs[12]*(-params.J[231])-rhs[13]*(-params.J[249])-rhs[29]*(-1);
+  lhs[34] = -rhs[0]*(-params.J[16])-rhs[1]*(-params.J[34])-rhs[2]*(-params.J[52])-rhs[3]*(-params.J[70])-rhs[4]*(-params.J[88])-rhs[5]*(-params.J[106])-rhs[6]*(-params.J[124])-rhs[7]*(-params.J[142])-rhs[8]*(-params.J[160])-rhs[9]*(-params.J[178])-rhs[10]*(-params.J[196])-rhs[11]*(-params.J[214])-rhs[12]*(-params.J[232])-rhs[13]*(-params.J[250])-rhs[30]*(-1);
+  lhs[35] = -rhs[0]*(-params.J[17])-rhs[1]*(-params.J[35])-rhs[2]*(-params.J[53])-rhs[3]*(-params.J[71])-rhs[4]*(-params.J[89])-rhs[5]*(-params.J[107])-rhs[6]*(-params.J[125])-rhs[7]*(-params.J[143])-rhs[8]*(-params.J[161])-rhs[9]*(-params.J[179])-rhs[10]*(-params.J[197])-rhs[11]*(-params.J[215])-rhs[12]*(-params.J[233])-rhs[13]*(-params.J[251])-rhs[31]*(-1);
+  lhs[36] = -rhs[0]*(-1);
+  lhs[37] = -rhs[1]*(-1);
+  lhs[38] = -rhs[2]*(-1);
+  lhs[39] = -rhs[3]*(-1);
+  lhs[40] = -rhs[4]*(-1);
+  lhs[41] = -rhs[5]*(-1);
+  lhs[42] = -rhs[6]*(-1);
+  lhs[43] = -rhs[7]*(-1);
+  lhs[44] = -rhs[8]*(-1);
+  lhs[45] = -rhs[9]*(-1);
+  lhs[46] = -rhs[10]*(-1);
+  lhs[47] = -rhs[11]*(-1);
+  lhs[48] = -rhs[12]*(-1);
+  lhs[49] = -rhs[13]*(-1);
+  lhs[50] = -rhs[0]*(1);
+  lhs[51] = -rhs[1]*(1);
+  lhs[52] = -rhs[2]*(1);
+  lhs[53] = -rhs[3]*(1);
+  lhs[54] = -rhs[4]*(1);
+  lhs[55] = -rhs[5]*(1);
+  lhs[56] = -rhs[6]*(1);
+  lhs[57] = -rhs[7]*(1);
+  lhs[58] = -rhs[8]*(1);
+  lhs[59] = -rhs[9]*(1);
+  lhs[60] = -rhs[10]*(1);
+  lhs[61] = -rhs[11]*(1);
+  lhs[62] = -rhs[12]*(1);
+  lhs[63] = -rhs[13]*(1);
+  lhs[64] = -rhs[0]*(params.A[0])-rhs[1]*(params.A[1])-rhs[2]*(params.A[2])-rhs[3]*(params.A[3])-rhs[4]*(params.A[4])-rhs[5]*(params.A[5])-rhs[6]*(params.A[6])-rhs[7]*(params.A[7])-rhs[8]*(params.A[8])-rhs[9]*(params.A[9])-rhs[10]*(params.A[10])-rhs[11]*(params.A[11])-rhs[12]*(params.A[12])-rhs[13]*(params.A[13]);
+}
+void multbymGT(double *lhs, double *rhs) {
+  lhs[0] = -rhs[0]*(params.J[0])-rhs[1]*(params.J[1])-rhs[2]*(params.J[2])-rhs[3]*(params.J[3])-rhs[4]*(params.J[4])-rhs[5]*(params.J[5])-rhs[6]*(params.J[6])-rhs[7]*(params.J[7])-rhs[8]*(params.J[8])-rhs[9]*(params.J[9])-rhs[10]*(params.J[10])-rhs[11]*(params.J[11])-rhs[12]*(params.J[12])-rhs[13]*(params.J[13])-rhs[14]*(params.J[14])-rhs[15]*(params.J[15])-rhs[16]*(params.J[16])-rhs[17]*(params.J[17])-rhs[18]*(-params.J[0])-rhs[19]*(-params.J[1])-rhs[20]*(-params.J[2])-rhs[21]*(-params.J[3])-rhs[22]*(-params.J[4])-rhs[23]*(-params.J[5])-rhs[24]*(-params.J[6])-rhs[25]*(-params.J[7])-rhs[26]*(-params.J[8])-rhs[27]*(-params.J[9])-rhs[28]*(-params.J[10])-rhs[29]*(-params.J[11])-rhs[30]*(-params.J[12])-rhs[31]*(-params.J[13])-rhs[32]*(-params.J[14])-rhs[33]*(-params.J[15])-rhs[34]*(-params.J[16])-rhs[35]*(-params.J[17])-rhs[36]*(-1)-rhs[50]*(1)-rhs[64]*(params.A[0]);
+  lhs[1] = -rhs[0]*(params.J[18])-rhs[1]*(params.J[19])-rhs[2]*(params.J[20])-rhs[3]*(params.J[21])-rhs[4]*(params.J[22])-rhs[5]*(params.J[23])-rhs[6]*(params.J[24])-rhs[7]*(params.J[25])-rhs[8]*(params.J[26])-rhs[9]*(params.J[27])-rhs[10]*(params.J[28])-rhs[11]*(params.J[29])-rhs[12]*(params.J[30])-rhs[13]*(params.J[31])-rhs[14]*(params.J[32])-rhs[15]*(params.J[33])-rhs[16]*(params.J[34])-rhs[17]*(params.J[35])-rhs[18]*(-params.J[18])-rhs[19]*(-params.J[19])-rhs[20]*(-params.J[20])-rhs[21]*(-params.J[21])-rhs[22]*(-params.J[22])-rhs[23]*(-params.J[23])-rhs[24]*(-params.J[24])-rhs[25]*(-params.J[25])-rhs[26]*(-params.J[26])-rhs[27]*(-params.J[27])-rhs[28]*(-params.J[28])-rhs[29]*(-params.J[29])-rhs[30]*(-params.J[30])-rhs[31]*(-params.J[31])-rhs[32]*(-params.J[32])-rhs[33]*(-params.J[33])-rhs[34]*(-params.J[34])-rhs[35]*(-params.J[35])-rhs[37]*(-1)-rhs[51]*(1)-rhs[64]*(params.A[1]);
+  lhs[2] = -rhs[0]*(params.J[36])-rhs[1]*(params.J[37])-rhs[2]*(params.J[38])-rhs[3]*(params.J[39])-rhs[4]*(params.J[40])-rhs[5]*(params.J[41])-rhs[6]*(params.J[42])-rhs[7]*(params.J[43])-rhs[8]*(params.J[44])-rhs[9]*(params.J[45])-rhs[10]*(params.J[46])-rhs[11]*(params.J[47])-rhs[12]*(params.J[48])-rhs[13]*(params.J[49])-rhs[14]*(params.J[50])-rhs[15]*(params.J[51])-rhs[16]*(params.J[52])-rhs[17]*(params.J[53])-rhs[18]*(-params.J[36])-rhs[19]*(-params.J[37])-rhs[20]*(-params.J[38])-rhs[21]*(-params.J[39])-rhs[22]*(-params.J[40])-rhs[23]*(-params.J[41])-rhs[24]*(-params.J[42])-rhs[25]*(-params.J[43])-rhs[26]*(-params.J[44])-rhs[27]*(-params.J[45])-rhs[28]*(-params.J[46])-rhs[29]*(-params.J[47])-rhs[30]*(-params.J[48])-rhs[31]*(-params.J[49])-rhs[32]*(-params.J[50])-rhs[33]*(-params.J[51])-rhs[34]*(-params.J[52])-rhs[35]*(-params.J[53])-rhs[38]*(-1)-rhs[52]*(1)-rhs[64]*(params.A[2]);
+  lhs[3] = -rhs[0]*(params.J[54])-rhs[1]*(params.J[55])-rhs[2]*(params.J[56])-rhs[3]*(params.J[57])-rhs[4]*(params.J[58])-rhs[5]*(params.J[59])-rhs[6]*(params.J[60])-rhs[7]*(params.J[61])-rhs[8]*(params.J[62])-rhs[9]*(params.J[63])-rhs[10]*(params.J[64])-rhs[11]*(params.J[65])-rhs[12]*(params.J[66])-rhs[13]*(params.J[67])-rhs[14]*(params.J[68])-rhs[15]*(params.J[69])-rhs[16]*(params.J[70])-rhs[17]*(params.J[71])-rhs[18]*(-params.J[54])-rhs[19]*(-params.J[55])-rhs[20]*(-params.J[56])-rhs[21]*(-params.J[57])-rhs[22]*(-params.J[58])-rhs[23]*(-params.J[59])-rhs[24]*(-params.J[60])-rhs[25]*(-params.J[61])-rhs[26]*(-params.J[62])-rhs[27]*(-params.J[63])-rhs[28]*(-params.J[64])-rhs[29]*(-params.J[65])-rhs[30]*(-params.J[66])-rhs[31]*(-params.J[67])-rhs[32]*(-params.J[68])-rhs[33]*(-params.J[69])-rhs[34]*(-params.J[70])-rhs[35]*(-params.J[71])-rhs[39]*(-1)-rhs[53]*(1)-rhs[64]*(params.A[3]);
+  lhs[4] = -rhs[0]*(params.J[72])-rhs[1]*(params.J[73])-rhs[2]*(params.J[74])-rhs[3]*(params.J[75])-rhs[4]*(params.J[76])-rhs[5]*(params.J[77])-rhs[6]*(params.J[78])-rhs[7]*(params.J[79])-rhs[8]*(params.J[80])-rhs[9]*(params.J[81])-rhs[10]*(params.J[82])-rhs[11]*(params.J[83])-rhs[12]*(params.J[84])-rhs[13]*(params.J[85])-rhs[14]*(params.J[86])-rhs[15]*(params.J[87])-rhs[16]*(params.J[88])-rhs[17]*(params.J[89])-rhs[18]*(-params.J[72])-rhs[19]*(-params.J[73])-rhs[20]*(-params.J[74])-rhs[21]*(-params.J[75])-rhs[22]*(-params.J[76])-rhs[23]*(-params.J[77])-rhs[24]*(-params.J[78])-rhs[25]*(-params.J[79])-rhs[26]*(-params.J[80])-rhs[27]*(-params.J[81])-rhs[28]*(-params.J[82])-rhs[29]*(-params.J[83])-rhs[30]*(-params.J[84])-rhs[31]*(-params.J[85])-rhs[32]*(-params.J[86])-rhs[33]*(-params.J[87])-rhs[34]*(-params.J[88])-rhs[35]*(-params.J[89])-rhs[40]*(-1)-rhs[54]*(1)-rhs[64]*(params.A[4]);
+  lhs[5] = -rhs[0]*(params.J[90])-rhs[1]*(params.J[91])-rhs[2]*(params.J[92])-rhs[3]*(params.J[93])-rhs[4]*(params.J[94])-rhs[5]*(params.J[95])-rhs[6]*(params.J[96])-rhs[7]*(params.J[97])-rhs[8]*(params.J[98])-rhs[9]*(params.J[99])-rhs[10]*(params.J[100])-rhs[11]*(params.J[101])-rhs[12]*(params.J[102])-rhs[13]*(params.J[103])-rhs[14]*(params.J[104])-rhs[15]*(params.J[105])-rhs[16]*(params.J[106])-rhs[17]*(params.J[107])-rhs[18]*(-params.J[90])-rhs[19]*(-params.J[91])-rhs[20]*(-params.J[92])-rhs[21]*(-params.J[93])-rhs[22]*(-params.J[94])-rhs[23]*(-params.J[95])-rhs[24]*(-params.J[96])-rhs[25]*(-params.J[97])-rhs[26]*(-params.J[98])-rhs[27]*(-params.J[99])-rhs[28]*(-params.J[100])-rhs[29]*(-params.J[101])-rhs[30]*(-params.J[102])-rhs[31]*(-params.J[103])-rhs[32]*(-params.J[104])-rhs[33]*(-params.J[105])-rhs[34]*(-params.J[106])-rhs[35]*(-params.J[107])-rhs[41]*(-1)-rhs[55]*(1)-rhs[64]*(params.A[5]);
+  lhs[6] = -rhs[0]*(params.J[108])-rhs[1]*(params.J[109])-rhs[2]*(params.J[110])-rhs[3]*(params.J[111])-rhs[4]*(params.J[112])-rhs[5]*(params.J[113])-rhs[6]*(params.J[114])-rhs[7]*(params.J[115])-rhs[8]*(params.J[116])-rhs[9]*(params.J[117])-rhs[10]*(params.J[118])-rhs[11]*(params.J[119])-rhs[12]*(params.J[120])-rhs[13]*(params.J[121])-rhs[14]*(params.J[122])-rhs[15]*(params.J[123])-rhs[16]*(params.J[124])-rhs[17]*(params.J[125])-rhs[18]*(-params.J[108])-rhs[19]*(-params.J[109])-rhs[20]*(-params.J[110])-rhs[21]*(-params.J[111])-rhs[22]*(-params.J[112])-rhs[23]*(-params.J[113])-rhs[24]*(-params.J[114])-rhs[25]*(-params.J[115])-rhs[26]*(-params.J[116])-rhs[27]*(-params.J[117])-rhs[28]*(-params.J[118])-rhs[29]*(-params.J[119])-rhs[30]*(-params.J[120])-rhs[31]*(-params.J[121])-rhs[32]*(-params.J[122])-rhs[33]*(-params.J[123])-rhs[34]*(-params.J[124])-rhs[35]*(-params.J[125])-rhs[42]*(-1)-rhs[56]*(1)-rhs[64]*(params.A[6]);
+  lhs[7] = -rhs[0]*(params.J[126])-rhs[1]*(params.J[127])-rhs[2]*(params.J[128])-rhs[3]*(params.J[129])-rhs[4]*(params.J[130])-rhs[5]*(params.J[131])-rhs[6]*(params.J[132])-rhs[7]*(params.J[133])-rhs[8]*(params.J[134])-rhs[9]*(params.J[135])-rhs[10]*(params.J[136])-rhs[11]*(params.J[137])-rhs[12]*(params.J[138])-rhs[13]*(params.J[139])-rhs[14]*(params.J[140])-rhs[15]*(params.J[141])-rhs[16]*(params.J[142])-rhs[17]*(params.J[143])-rhs[18]*(-params.J[126])-rhs[19]*(-params.J[127])-rhs[20]*(-params.J[128])-rhs[21]*(-params.J[129])-rhs[22]*(-params.J[130])-rhs[23]*(-params.J[131])-rhs[24]*(-params.J[132])-rhs[25]*(-params.J[133])-rhs[26]*(-params.J[134])-rhs[27]*(-params.J[135])-rhs[28]*(-params.J[136])-rhs[29]*(-params.J[137])-rhs[30]*(-params.J[138])-rhs[31]*(-params.J[139])-rhs[32]*(-params.J[140])-rhs[33]*(-params.J[141])-rhs[34]*(-params.J[142])-rhs[35]*(-params.J[143])-rhs[43]*(-1)-rhs[57]*(1)-rhs[64]*(params.A[7]);
+  lhs[8] = -rhs[0]*(params.J[144])-rhs[1]*(params.J[145])-rhs[2]*(params.J[146])-rhs[3]*(params.J[147])-rhs[4]*(params.J[148])-rhs[5]*(params.J[149])-rhs[6]*(params.J[150])-rhs[7]*(params.J[151])-rhs[8]*(params.J[152])-rhs[9]*(params.J[153])-rhs[10]*(params.J[154])-rhs[11]*(params.J[155])-rhs[12]*(params.J[156])-rhs[13]*(params.J[157])-rhs[14]*(params.J[158])-rhs[15]*(params.J[159])-rhs[16]*(params.J[160])-rhs[17]*(params.J[161])-rhs[18]*(-params.J[144])-rhs[19]*(-params.J[145])-rhs[20]*(-params.J[146])-rhs[21]*(-params.J[147])-rhs[22]*(-params.J[148])-rhs[23]*(-params.J[149])-rhs[24]*(-params.J[150])-rhs[25]*(-params.J[151])-rhs[26]*(-params.J[152])-rhs[27]*(-params.J[153])-rhs[28]*(-params.J[154])-rhs[29]*(-params.J[155])-rhs[30]*(-params.J[156])-rhs[31]*(-params.J[157])-rhs[32]*(-params.J[158])-rhs[33]*(-params.J[159])-rhs[34]*(-params.J[160])-rhs[35]*(-params.J[161])-rhs[44]*(-1)-rhs[58]*(1)-rhs[64]*(params.A[8]);
+  lhs[9] = -rhs[0]*(params.J[162])-rhs[1]*(params.J[163])-rhs[2]*(params.J[164])-rhs[3]*(params.J[165])-rhs[4]*(params.J[166])-rhs[5]*(params.J[167])-rhs[6]*(params.J[168])-rhs[7]*(params.J[169])-rhs[8]*(params.J[170])-rhs[9]*(params.J[171])-rhs[10]*(params.J[172])-rhs[11]*(params.J[173])-rhs[12]*(params.J[174])-rhs[13]*(params.J[175])-rhs[14]*(params.J[176])-rhs[15]*(params.J[177])-rhs[16]*(params.J[178])-rhs[17]*(params.J[179])-rhs[18]*(-params.J[162])-rhs[19]*(-params.J[163])-rhs[20]*(-params.J[164])-rhs[21]*(-params.J[165])-rhs[22]*(-params.J[166])-rhs[23]*(-params.J[167])-rhs[24]*(-params.J[168])-rhs[25]*(-params.J[169])-rhs[26]*(-params.J[170])-rhs[27]*(-params.J[171])-rhs[28]*(-params.J[172])-rhs[29]*(-params.J[173])-rhs[30]*(-params.J[174])-rhs[31]*(-params.J[175])-rhs[32]*(-params.J[176])-rhs[33]*(-params.J[177])-rhs[34]*(-params.J[178])-rhs[35]*(-params.J[179])-rhs[45]*(-1)-rhs[59]*(1)-rhs[64]*(params.A[9]);
+  lhs[10] = -rhs[0]*(params.J[180])-rhs[1]*(params.J[181])-rhs[2]*(params.J[182])-rhs[3]*(params.J[183])-rhs[4]*(params.J[184])-rhs[5]*(params.J[185])-rhs[6]*(params.J[186])-rhs[7]*(params.J[187])-rhs[8]*(params.J[188])-rhs[9]*(params.J[189])-rhs[10]*(params.J[190])-rhs[11]*(params.J[191])-rhs[12]*(params.J[192])-rhs[13]*(params.J[193])-rhs[14]*(params.J[194])-rhs[15]*(params.J[195])-rhs[16]*(params.J[196])-rhs[17]*(params.J[197])-rhs[18]*(-params.J[180])-rhs[19]*(-params.J[181])-rhs[20]*(-params.J[182])-rhs[21]*(-params.J[183])-rhs[22]*(-params.J[184])-rhs[23]*(-params.J[185])-rhs[24]*(-params.J[186])-rhs[25]*(-params.J[187])-rhs[26]*(-params.J[188])-rhs[27]*(-params.J[189])-rhs[28]*(-params.J[190])-rhs[29]*(-params.J[191])-rhs[30]*(-params.J[192])-rhs[31]*(-params.J[193])-rhs[32]*(-params.J[194])-rhs[33]*(-params.J[195])-rhs[34]*(-params.J[196])-rhs[35]*(-params.J[197])-rhs[46]*(-1)-rhs[60]*(1)-rhs[64]*(params.A[10]);
+  lhs[11] = -rhs[0]*(params.J[198])-rhs[1]*(params.J[199])-rhs[2]*(params.J[200])-rhs[3]*(params.J[201])-rhs[4]*(params.J[202])-rhs[5]*(params.J[203])-rhs[6]*(params.J[204])-rhs[7]*(params.J[205])-rhs[8]*(params.J[206])-rhs[9]*(params.J[207])-rhs[10]*(params.J[208])-rhs[11]*(params.J[209])-rhs[12]*(params.J[210])-rhs[13]*(params.J[211])-rhs[14]*(params.J[212])-rhs[15]*(params.J[213])-rhs[16]*(params.J[214])-rhs[17]*(params.J[215])-rhs[18]*(-params.J[198])-rhs[19]*(-params.J[199])-rhs[20]*(-params.J[200])-rhs[21]*(-params.J[201])-rhs[22]*(-params.J[202])-rhs[23]*(-params.J[203])-rhs[24]*(-params.J[204])-rhs[25]*(-params.J[205])-rhs[26]*(-params.J[206])-rhs[27]*(-params.J[207])-rhs[28]*(-params.J[208])-rhs[29]*(-params.J[209])-rhs[30]*(-params.J[210])-rhs[31]*(-params.J[211])-rhs[32]*(-params.J[212])-rhs[33]*(-params.J[213])-rhs[34]*(-params.J[214])-rhs[35]*(-params.J[215])-rhs[47]*(-1)-rhs[61]*(1)-rhs[64]*(params.A[11]);
+  lhs[12] = -rhs[0]*(params.J[216])-rhs[1]*(params.J[217])-rhs[2]*(params.J[218])-rhs[3]*(params.J[219])-rhs[4]*(params.J[220])-rhs[5]*(params.J[221])-rhs[6]*(params.J[222])-rhs[7]*(params.J[223])-rhs[8]*(params.J[224])-rhs[9]*(params.J[225])-rhs[10]*(params.J[226])-rhs[11]*(params.J[227])-rhs[12]*(params.J[228])-rhs[13]*(params.J[229])-rhs[14]*(params.J[230])-rhs[15]*(params.J[231])-rhs[16]*(params.J[232])-rhs[17]*(params.J[233])-rhs[18]*(-params.J[216])-rhs[19]*(-params.J[217])-rhs[20]*(-params.J[218])-rhs[21]*(-params.J[219])-rhs[22]*(-params.J[220])-rhs[23]*(-params.J[221])-rhs[24]*(-params.J[222])-rhs[25]*(-params.J[223])-rhs[26]*(-params.J[224])-rhs[27]*(-params.J[225])-rhs[28]*(-params.J[226])-rhs[29]*(-params.J[227])-rhs[30]*(-params.J[228])-rhs[31]*(-params.J[229])-rhs[32]*(-params.J[230])-rhs[33]*(-params.J[231])-rhs[34]*(-params.J[232])-rhs[35]*(-params.J[233])-rhs[48]*(-1)-rhs[62]*(1)-rhs[64]*(params.A[12]);
+  lhs[13] = -rhs[0]*(params.J[234])-rhs[1]*(params.J[235])-rhs[2]*(params.J[236])-rhs[3]*(params.J[237])-rhs[4]*(params.J[238])-rhs[5]*(params.J[239])-rhs[6]*(params.J[240])-rhs[7]*(params.J[241])-rhs[8]*(params.J[242])-rhs[9]*(params.J[243])-rhs[10]*(params.J[244])-rhs[11]*(params.J[245])-rhs[12]*(params.J[246])-rhs[13]*(params.J[247])-rhs[14]*(params.J[248])-rhs[15]*(params.J[249])-rhs[16]*(params.J[250])-rhs[17]*(params.J[251])-rhs[18]*(-params.J[234])-rhs[19]*(-params.J[235])-rhs[20]*(-params.J[236])-rhs[21]*(-params.J[237])-rhs[22]*(-params.J[238])-rhs[23]*(-params.J[239])-rhs[24]*(-params.J[240])-rhs[25]*(-params.J[241])-rhs[26]*(-params.J[242])-rhs[27]*(-params.J[243])-rhs[28]*(-params.J[244])-rhs[29]*(-params.J[245])-rhs[30]*(-params.J[246])-rhs[31]*(-params.J[247])-rhs[32]*(-params.J[248])-rhs[33]*(-params.J[249])-rhs[34]*(-params.J[250])-rhs[35]*(-params.J[251])-rhs[49]*(-1)-rhs[63]*(1)-rhs[64]*(params.A[13]);
+  lhs[14] = -rhs[0]*(-1)-rhs[18]*(-1);
+  lhs[15] = -rhs[1]*(-1)-rhs[19]*(-1);
+  lhs[16] = -rhs[2]*(-1)-rhs[20]*(-1);
+  lhs[17] = -rhs[3]*(-1)-rhs[21]*(-1);
+  lhs[18] = -rhs[4]*(-1)-rhs[22]*(-1);
+  lhs[19] = -rhs[5]*(-1)-rhs[23]*(-1);
+  lhs[20] = -rhs[6]*(-1)-rhs[24]*(-1);
+  lhs[21] = -rhs[7]*(-1)-rhs[25]*(-1);
+  lhs[22] = -rhs[8]*(-1)-rhs[26]*(-1);
+  lhs[23] = -rhs[9]*(-1)-rhs[27]*(-1);
+  lhs[24] = -rhs[10]*(-1)-rhs[28]*(-1);
+  lhs[25] = -rhs[11]*(-1)-rhs[29]*(-1);
+  lhs[26] = -rhs[12]*(-1)-rhs[30]*(-1);
+  lhs[27] = -rhs[13]*(-1)-rhs[31]*(-1);
+  lhs[28] = -rhs[14]*(-1)-rhs[32]*(-1);
+  lhs[29] = -rhs[15]*(-1)-rhs[33]*(-1);
+  lhs[30] = -rhs[16]*(-1)-rhs[34]*(-1);
+  lhs[31] = -rhs[17]*(-1)-rhs[35]*(-1);
+}
+void multbyP(double *lhs, double *rhs) {
+  /* TODO use the fact that P is symmetric? */
+  /* TODO check doubling / half factor etc. */
+  lhs[0] = 0;
+  lhs[1] = 0;
+  lhs[2] = 0;
+  lhs[3] = 0;
+  lhs[4] = 0;
+  lhs[5] = 0;
+  lhs[6] = 0;
+  lhs[7] = 0;
+  lhs[8] = 0;
+  lhs[9] = 0;
+  lhs[10] = 0;
+  lhs[11] = 0;
+  lhs[12] = 0;
+  lhs[13] = 0;
+  lhs[14] = 0;
+  lhs[15] = 0;
+  lhs[16] = 0;
+  lhs[17] = 0;
+  lhs[18] = 0;
+  lhs[19] = 0;
+  lhs[20] = 0;
+  lhs[21] = 0;
+  lhs[22] = 0;
+  lhs[23] = 0;
+  lhs[24] = 0;
+  lhs[25] = 0;
+  lhs[26] = 0;
+  lhs[27] = 0;
+  lhs[28] = 0;
+  lhs[29] = 0;
+  lhs[30] = 0;
+  lhs[31] = 0;
+}
+void fillq(void) {
+  work.q[0] = 0;
+  work.q[1] = 0;
+  work.q[2] = 0;
+  work.q[3] = 0;
+  work.q[4] = 0;
+  work.q[5] = 0;
+  work.q[6] = 0;
+  work.q[7] = 0;
+  work.q[8] = 0;
+  work.q[9] = 0;
+  work.q[10] = 0;
+  work.q[11] = 0;
+  work.q[12] = 0;
+  work.q[13] = 0;
+  work.q[14] = 1;
+  work.q[15] = 1;
+  work.q[16] = 1;
+  work.q[17] = 1;
+  work.q[18] = 1;
+  work.q[19] = 1;
+  work.q[20] = 1;
+  work.q[21] = 1;
+  work.q[22] = 1;
+  work.q[23] = 1;
+  work.q[24] = 1;
+  work.q[25] = 1;
+  work.q[26] = 1;
+  work.q[27] = 1;
+  work.q[28] = 1;
+  work.q[29] = 1;
+  work.q[30] = 1;
+  work.q[31] = 1;
+}
+void fillh(void) {
+  work.h[0] = params.Xi[0];
+  work.h[1] = params.Xi[1];
+  work.h[2] = params.Xi[2];
+  work.h[3] = params.Xi[3];
+  work.h[4] = params.Xi[4];
+  work.h[5] = params.Xi[5];
+  work.h[6] = params.Xi[6];
+  work.h[7] = params.Xi[7];
+  work.h[8] = params.Xi[8];
+  work.h[9] = params.Xi[9];
+  work.h[10] = params.Xi[10];
+  work.h[11] = params.Xi[11];
+  work.h[12] = params.Xi[12];
+  work.h[13] = params.Xi[13];
+  work.h[14] = params.Xi[14];
+  work.h[15] = params.Xi[15];
+  work.h[16] = params.Xi[16];
+  work.h[17] = params.Xi[17];
+  work.h[18] = -params.Xi[0];
+  work.h[19] = -params.Xi[1];
+  work.h[20] = -params.Xi[2];
+  work.h[21] = -params.Xi[3];
+  work.h[22] = -params.Xi[4];
+  work.h[23] = -params.Xi[5];
+  work.h[24] = -params.Xi[6];
+  work.h[25] = -params.Xi[7];
+  work.h[26] = -params.Xi[8];
+  work.h[27] = -params.Xi[9];
+  work.h[28] = -params.Xi[10];
+  work.h[29] = -params.Xi[11];
+  work.h[30] = -params.Xi[12];
+  work.h[31] = -params.Xi[13];
+  work.h[32] = -params.Xi[14];
+  work.h[33] = -params.Xi[15];
+  work.h[34] = -params.Xi[16];
+  work.h[35] = -params.Xi[17];
+  work.h[36] = -params.L_min[0];
+  work.h[37] = -params.L_min[1];
+  work.h[38] = -params.L_min[2];
+  work.h[39] = -params.L_min[3];
+  work.h[40] = -params.L_min[4];
+  work.h[41] = -params.L_min[5];
+  work.h[42] = -params.L_min[6];
+  work.h[43] = -params.L_min[7];
+  work.h[44] = -params.L_min[8];
+  work.h[45] = -params.L_min[9];
+  work.h[46] = -params.L_min[10];
+  work.h[47] = -params.L_min[11];
+  work.h[48] = -params.L_min[12];
+  work.h[49] = -params.L_min[13];
+  work.h[50] = params.L_max[0];
+  work.h[51] = params.L_max[1];
+  work.h[52] = params.L_max[2];
+  work.h[53] = params.L_max[3];
+  work.h[54] = params.L_max[4];
+  work.h[55] = params.L_max[5];
+  work.h[56] = params.L_max[6];
+  work.h[57] = params.L_max[7];
+  work.h[58] = params.L_max[8];
+  work.h[59] = params.L_max[9];
+  work.h[60] = params.L_max[10];
+  work.h[61] = params.L_max[11];
+  work.h[62] = params.L_max[12];
+  work.h[63] = params.L_max[13];
+  work.h[64] = params.b[0];
+}
+void fillb(void) {
+}
+void pre_ops(void) {
+}
