@@ -120,7 +120,6 @@ script:
   - make
   - sudo make install
   - cd ..
-  - cd catkin_make
   - sudo add-apt-repository ppa:titas-chanda/armadillo -y
   - sudo apt-get update
   - sudo apt-get install libarmadillo-dev
