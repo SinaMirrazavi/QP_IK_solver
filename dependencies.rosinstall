@@ -1,0 +1,2 @@
+- git: {local-name: svm_grad, uri: 'https://github.com/nbfigueroa/SVMGrad.git'}
+- git: {local-name: sg_differentiation, uri: 'https://github.com/epfl-lasa/sg_differentiation.git'}
