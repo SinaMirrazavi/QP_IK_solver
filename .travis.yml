@@ -112,6 +112,13 @@ script:
   - source /opt/ros/$ROS_DISTRO/setup.bash
   - source devel/setup.bash
   - rospack profile
+  - wget "http://ab-initio.mit.edu/nlopt/nlopt-2.4.2.tar.gz" 
+  - tar -xvzf nlopt-2.4.2.tar.gz
+  - cd nlopt-2.4.2
+  - ./configure --enable-shared
+  - export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/lib
+  - make
+  - sudo make install
   - sudo add-apt-repository ppa:titas-chanda/armadillo -y
   - sudo apt-get update
   - sudo apt-get install libarmadillo-dev
