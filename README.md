@@ -30,8 +30,8 @@ CVXGEN http://cvxgen.com/docs/index.html **(In this package, Cvxgen for two 7 DO
   - CVXgen
   
 # How to run
- 
-1-Initialize the QP solver:
+### Initialization:
+1-Initialize the IK solver:
   1-1 If You don't want to use the SCA constraint
 ```
 Initialize(Number of robots ,Time sample ,Solver_type={Numerical=0,Dynamical},Solver_level={Velocity_level=0,Acceleration_level},Super_constraint={True, False})
@@ -49,6 +49,7 @@ Initialize_robot(index of the robot,Number of links,Number of end-effector const
 ```
 Finalize_Initialization()
 ``` 
+### In the loop:
 4- In the loop:
 ```
 set_jacobian(index of the robot,Jacobian of the end-effector)
