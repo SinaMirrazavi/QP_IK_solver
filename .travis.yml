@@ -71,6 +71,7 @@ before_install:
   - sudo apt-get install -y python-catkin-pkg python-rosdep python-wstool ros-$ROS_DISTRO-catkin
   - source /opt/ros/$ROS_DISTRO/setup.bash
   # Prepare rosdep to install dependencies.
+  - pip install catkin_pkg
   - sudo rosdep init
   - rosdep update
 
