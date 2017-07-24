@@ -384,15 +384,6 @@ void qp_ik_solver::Solve()
 	}
 
 
-    if (considerCollision){
-        //clock_t t;
-       // t = clock();
-       // t = clock() - t;
-      //  cout << "Boundary Construction Time: " << ((float)t)/CLOCKS_PER_SEC << endl;
-//        myfile_time << ((float)t)/CLOCKS_PER_SEC << endl;
-    }
-
-
 	if (Solver_type_==Dynamical)
 	{
 		VectorXd U_Handle_(Dimension_q_);
