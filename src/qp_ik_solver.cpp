@@ -496,7 +496,7 @@ void qp_ik_solver::Solve()
 		else if (Solver_N_Type==CVXgen1)
 		{
 
-			t1 = clock();
+		//	t1 = clock();
 			load_default_data();
 			settings.verbose =0;
 			int num_iters = solve();
@@ -510,13 +510,13 @@ void qp_ik_solver::Solve()
 			{
 				X_QP_(i)=outp(i);
 			}
-			duration = clock() - t1;
+/*			duration = clock() - t1;
 			myfile<<((float)duration)/CLOCKS_PER_SEC<<" "<<(CE_QP_*X_QP_-ce0_QP_).norm();
 			for (int i=0;i<Dimension_q_;i++)
 			{
 				myfile<<" "<<X_QP_(i);
 			}
-			myfile<<" "<<endl;
+			myfile<<" "<<endl;*/
 		}
 		//printf ("It took me %d clicks (%f seconds).\n",duration,((float)duration)/CLOCKS_PER_SEC);
 		restart_the_robots();
