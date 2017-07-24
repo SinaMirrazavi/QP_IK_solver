@@ -81,30 +81,6 @@ void qp_ik_solver::Initialize(int N_robots,double dt,Solver_type type,Solver_lev
 }
 
 
-void qp_ik_solver::Initialize(int N_robots,double dt,Solver_type type,Solver_level level,bool Super_constraint, string svm_filename)
-{
-	/* Declare the number of the robots
-	 * sample time (dt)
-	 * Type of the solver
-	 * Collision Boundary SVM filename (full path) */
-
-	N_robots_=N_robots;
-	dt_=dt;
-	Robots_=new S_Robot_IK[N_robots_];
-	Solver_level_=level;
-	Solver_type_=type;
-	mu_p_=20;
-	eta_p_=0.9;
-	Super_constraint_=Super_constraint;
-	Solver_N_Type=CVXgen1;
-	if (save_the_performace){	myfile.open ("IK_solver_performace_Dynamical.txt");}
-
-	svmBoundary_.loadModel(svm_filename);
-	svmBoundary_.preComputeKernel(true);
-	considerCollision = true;
-    lambda = 10;
-
-}
 
 
 
@@ -390,11 +366,6 @@ void qp_ik_solver::set_desired(int index,VectorXd Desired_end){
 	Robots_[index].desired_position_is_set=true;
 }
 
-
-void qp_ik_solver::get_gamma(double& gamma){
-	gamma = Gamma_;
-}
-
 void qp_ik_solver::Solve()
 {
 	/* Solving the IK problem
@@ -416,7 +387,6 @@ void qp_ik_solver::Solve()
     if (considerCollision){
         //clock_t t;
        // t = clock();
-        Construct_collision_boundaries();
        // t = clock() - t;
       //  cout << "Boundary Construction Time: " << ((float)t)/CLOCKS_PER_SEC << endl;
 //        myfile_time << ((float)t)/CLOCKS_PER_SEC << endl;
@@ -704,42 +674,6 @@ inline void qp_ik_solver::Construct_vel()
 
 }
 
-inline void qp_ik_solver::Construct_collision_boundaries()
-{
-    /*Fill DGamma_ and Gamma_
-     * Gamma_ is a double
-     * DGamma_ is the derivative of Gamma and its dimension is Dimension_q
-     *  */
-
-    // Construct input 36D feature vector f(q) and J(f(q))
-    VectorXd f_q;MatrixXd J_fq;
-    unsigned int collision_joints = 6,  n_fq = 3, nDoF= 7;
-    f_q.resize(collision_joints*n_fq*N_robots_);
-    J_fq.resize(collision_joints*n_fq*N_robots_, nDoF);
-
-    int block_idx = 0;
-    for (unsigned int index=0;index<N_robots_;index++)
-        for	(int j=0;j<collision_joints;j++){
-            f_q.block(block_idx,0,n_fq,1)     = Robots_[index].Jacobian_R.Link_pos[j];
-            J_fq.block(block_idx,0,n_fq,nDoF) = Robots_[index].Jacobian_R.Jacobian_7[j];
-            block_idx = block_idx + n_fq;
-        }
-
-    // Compute Gamma(f(q)) and DGamma(f(q)) (36D)
-    MatrixXd Gamma_der; Gamma_der.resize(collision_joints*n_fq,1);
-    Gamma_    = svmBoundary_.calculateGamma(f_q);
-    Gamma_der = svmBoundary_.calculateGammaDerivative(f_q);
-
-    // Project DGamma(f(q)) (36D) -> DGamma(q) (14D)
-    MatrixXd Gamma_derxJ_fq; Gamma_derxJ_fq.resize(1,nDoF);
-
-    for (unsigned int index=0;index<N_robots_;index++){
-        Gamma_derxJ_fq = Gamma_der.block(index*collision_joints*n_fq,0,collision_joints*n_fq,1).transpose()*J_fq.block(index*collision_joints*n_fq,0,collision_joints*n_fq,nDoF);
-        DGamma_.block(index*nDoF,0,nDoF,1) = Gamma_derxJ_fq.transpose().normalized();
-    }
-
-
-}
 inline void qp_ik_solver::restart_the_robots()
 {
 	for(int i=0;i<N_robots_;i++)
@@ -788,19 +722,5 @@ void qp_ik_solver::load_default_data() {
 			counter++;
 		}
 	}
-
-	for (int j = 0; j < Dimension_q_; j++)
-	{
-		params.A[j]=-DGamma_(j);
-	}
-	if (Gamma_<1.2)
-	{
-		params.b[0]=lambda*log(0.2);
-	}
-	else
-	{
-	    params.b[0]=lambda*log(Gamma_-1);
-	}
-
 
 }
