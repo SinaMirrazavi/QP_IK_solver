@@ -59,8 +59,14 @@ set_desired(index of the robot,Desired end-effector state);
 Solve();
 get_state(index of the robot, desired joint velocity);
 ```
-# Example of the using this package for two 7-DOF robots is available here:
-
-
+## Copyright
+Please cite these papers if you are using this toolbox:
+@article{mirrazavi2018unified,
+  title={A unified framework for coordinated multi-arm motion planning},
+  author={Mirrazavi Salehian, Seyed Sina and Figueroa, Nadia and Billard, Aude},
+  journal={The International Journal of Robotics Research},
+  pages={0278364918765952},
+  publisher={SAGE Publications Sage UK: London, England}
+}
 
 For more information contact Sina Mirrazavi.
