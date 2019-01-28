@@ -6,6 +6,7 @@ project(qp_ik_solver)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
   roscpp
+  mathlib
   svm_grad
   sg_differentiation
 )
@@ -130,6 +131,7 @@ catkin_package(
 ## Your package locations should be listed before other locations
  include_directories(include)
   include_directories(cvxgen)
+  include_directories(svm_grad)
 include_directories(
   ${catkin_INCLUDE_DIRS} ${Boost_INCLUDE_DIRS} ${svm_grad_INCLUDE_DIRS}
   )
@@ -151,7 +153,7 @@ FILE(GLOB theHeaderFiles include/qp_ik_solver.h)
 ## Declare a C++ library
 add_library(${PROJECT_NAME} ${theSourceFiles} ${theHeaderFiles} )
 target_compile_options(${PROJECT_NAME} PRIVATE ${OpenMP_FLAGS})
-target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES} solver /usr/local/lib/libnlopt.so.0.8.2 -lnlopt -lm ${OpenMP_FLAGS} )
+target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES} svm_grad solver /usr/local/lib/libnlopt.so -lnlopt -lm ${OpenMP_FLAGS} )
 
  add_executable(tets_solver_qp_cvx cvxgen/example/testsolver.cpp)
 target_link_libraries(tets_solver_qp_cvx solver )

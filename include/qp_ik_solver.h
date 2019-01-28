@@ -25,6 +25,7 @@
 #include <nlopt.hpp>
 #include  <omp.h>
 #include "solver.h"
+#include "svm_grad.h"
 #include "sg_filter.h"
 
 using namespace Eigen;
@@ -92,6 +93,7 @@ class qp_ik_solver
 public:
 
 	void Initialize(int N_robots, double dt,Solver_type type,Solver_level level,bool Super_constraint);
+    void Initialize(int N_robots, double dt,Solver_type type,Solver_level level,bool Super_constraint, string svm_filename);
 	void Initialize_robot(int index,int N_links,int N_constraints,MatrixXd W,VectorXd U_q, VectorXd L_q,	VectorXd U_Dq,VectorXd L_Dq,VectorXd U_DDq,VectorXd L_DDq);
 	void Initialize_robot(int index,int N_links,int N_constraints,MatrixXd W,VectorXd U_q, VectorXd L_q,	VectorXd U_Dq,VectorXd L_Dq);
 	void Finalize_Initialization();
@@ -109,8 +111,11 @@ private:
 	VectorXd	Omega_projector(VectorXd Input,VectorXd Upper,VectorXd Lower);
 
 	inline	void 		Construct_vel();
-
 	inline	void		Construct_boundaries_vel();
+
+	inline	void		Construct_collision_boundaries();
+
+
 
 	inline	void		restart_the_robots();
 
@@ -155,6 +160,7 @@ private:
 	double 		mu_p_;
 	double 		eta_p_;
 
+    SVMGrad     svmBoundary_;
 	double		Gamma_;
 	VectorXd	DGamma_;
     bool        considerCollision;
