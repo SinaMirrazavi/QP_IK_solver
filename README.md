@@ -20,6 +20,7 @@ Nlopt http://ab-initio.mit.edu/wiki/index.php/NLopt
 
 CVXGEN http://cvxgen.com/docs/index.html **(Due to the license, I needed to remove CVxgen, please follow the steps in the mentioned webpage to get the CVxgen files.)**
 
+VERY Very important NOTE: This package will not work without CVXGEN! You must the files and put them in a folder named cvxgen. 
 # Features:
 
 - Handling the kinematic constraints of the robots.
