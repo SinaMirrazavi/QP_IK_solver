@@ -18,7 +18,7 @@ Sg_differentiation https://github.com/epfl-lasa/sg_differentiation.git
 
 Nlopt http://ab-initio.mit.edu/wiki/index.php/NLopt
 
-CVXGEN http://cvxgen.com/docs/index.html **(In this package, Cvxgen for two 7 DOF robots has already been included. If you want to use this package for other robots, you just need to create new CVxgen files.)**
+CVXGEN http://cvxgen.com/docs/index.html **(Due to lisence, I needed to remove CVxgen, please follow the steps in the mentioned webpage to get the CVxgen files.)**
 
 # Features:
 
