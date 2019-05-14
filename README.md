@@ -18,7 +18,7 @@ Sg_differentiation https://github.com/epfl-lasa/sg_differentiation.git
 
 Nlopt http://ab-initio.mit.edu/wiki/index.php/NLopt
 
-CVXGEN http://cvxgen.com/docs/index.html **(Due to lisence, I needed to remove CVxgen, please follow the steps in the mentioned webpage to get the CVxgen files.)**
+CVXGEN http://cvxgen.com/docs/index.html **(Due to the license, I needed to remove CVxgen, please follow the steps in the mentioned webpage to get the CVxgen files.)**
 
 # Features:
 
