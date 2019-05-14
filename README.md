@@ -1,5 +1,4 @@
 # QP_IK_solver
-[![Build Status](https://travis-ci.org/sinamr66/QP_IK_solver.svg?branch=master)](https://travis-ci.org/sinamr66/QP_IK_solver)
 
 This repository includes the packages and instructions to solve the centralized inverse kinematic problem, formulated as a quadratic program (QP) and solved in real-time. You can find the paper here:
 
